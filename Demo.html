@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+   background: grey;
+  }
+section{
+  display:flex;
+  flex-wrap:wrap;
+  background-color: darkred;
+}
+h1{
+  font-family: MarioFont;
+  color: white;
+}
+h2{
+  font-family: MarioFont;
+  color: Blue;
+}
+
+
+@keyframes SonicRun{
+    100% {background-position: -132px ;}
+}
+@keyframes Bowser{
+    100% {background-position: 236px ;}
+}
+@keyframes Etna{
+    100% {background-position: -689px ;}
+}
+
+
+#MoveMe1 {
+    width: 33px;
+    height: 40px;
+    position: relative;
+    background: url('media/SonicRunning.png');
+    background-size: cover;
+    background-color: none;
+    animation: SonicRun .25s steps(4) infinite;
+  }
+  #MoveMe2 {
+    width: 59px;
+    height: 62px;
+    position: relative;
+    background: url('media/Bowser.png');
+    background-size: cover;
+    background-color: none;
+    animation: Bowser 1s steps(4) infinite;
+  }
+  #MoveMe3 {
+    width: 114.8px;
+    height: 167px;
+    position: relative;
+    background: url('media/Etna.png');
+    background-size: cover;
+    background-color: none;
+    animation: Etna 1.5s steps(6) infinite;
+  }
+
+</style>
+
+
+</head>
+
+<body>
+
+   <h1>Demonstrating CSS Animations </h1>
+   <h2>Below are examples of CSS animation</h2>
+   <section>
+  
+   <p id="MoveMe1"></p>
+   <p id="MoveMe2"></p>
+   <p id="MoveMe3"></p>
+         
+    
+    
+   </section>
+</body>
+</html>
