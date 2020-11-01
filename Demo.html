@@ -1,184 +1,169 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            background: #fadd6a;
-            font-family: MarioFont, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+   background: #fadd6a;
+   font-family: MarioFont, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+  }  
+p{
+  margin-left: 10px;
+  }
+section{
+  display:flex;
+  margin-left: 50px; 
+  flex-wrap:wrap;
+  background-color: #5D9191;
+}
+h1{ 
+  color: black;
+  text-align: center;
+  font-size: 50px;
+}
+h2{  
+  color: Blue;
+  margin-left: 50px;
+  padding: 10px;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 40%;
+  padding: 0 10px;
+  margin-left: 10px;
+}
 
-        p {
-            margin-left: 10px;
-        }
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
 
-        section {
-            display: flex;
-            margin-left: 50px;
-            flex-wrap: wrap;
-            background-color: #5D9191;
-        }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-        h1 {
-            color: black;
-            text-align: center;
-            font-size: 50px;
-        }
-
-        h2 {
-            color: Blue;
-            margin-left: 50px;
-            padding: 10px;
-        }
-        /* Float four columns side by side */
-        .column {
-            float: left;
-            width: 40%;
-            padding: 0 10px;
-            margin-left: 10px;
-        }
-
-        /* Remove extra left and right margins, due to padding */
-        .row {
-            margin: 0 -5px;
-        }
-
-            /* Clear floats after the columns */
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-
-        /* Responsive columns */
-        @media screen and (max-width: 600px) {
-            .column {
-                width: 100%;
-                display: block;
-                margin-bottom: 20px;
-            }
-        }
-
-        .row {
-            background-color: #fadd6a;
-        }
-        /* Style the counter cards */
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            padding: 16px;
-            text-align: center;
-            background-color: #5D9191;
-        }
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.row{
+  background-color: #fadd6a;
+}
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color:#5D9191;
+}
 
 
-        @keyframes SonicRun {
-            100% {
-                background-position: -132px;
-            }
-        }
+@keyframes SonicRun{
+    100% {background-position: -132px ;}
+}
+@keyframes Bowser{
+    100% {background-position: 236px ;}
+}
+@keyframes Etna{
+    100% {background-position: -689px ;}
+}
+@keyframes Knuckles{
+    100% {background-position: 279px ;}
+}
 
-        @keyframes Bowser {
-            100% {
-                background-position: 236px;
-            }
-        }
+#MoveMe1 {
+    width: 33px;
+    height: 40px;
+    position: relative;
+    background: url('media/SonicRunning.png');
+    background-size: cover;
+    background-color: none;
+    animation: SonicRun .25s steps(4) infinite;
+  }
+  #MoveMe2 {
+    width: 59px;
+    height: 62px;
+    position: relative;
+    background: url('media/Bowser.png');
+    background-size: cover;
+    background-color: none;
+    animation: Bowser 1s steps(4) infinite;
+  }
+  #MoveMe3 {
+    width: 114.8px;
+    height: 167px;
+    position: relative;
+    background: url('media/Etna.png');
+    background-size: cover;
+    background-color: none;
+    animation: Etna 1.5s steps(6) infinite;
+  }
+  #MoveMe4 {
+    width: 31px;
+    height: 33px;
+    position: relative;
+    background: url('media/knuckles2.png');
+    background-size: cover;
+    background-color: none;
+    animation: Knuckles 1.25s steps(9) infinite;
+  }
 
-        @keyframes Etna {
-            100% {
-                background-position: -689px;
-            }
-        }
-
-        @keyframes Knuckles {
-            100% {
-                background-position: 279px;
-            }
-        }
-
-        #MoveMe1 {
-            width: 33px;
-            height: 40px;
-            position: relative;
-            background: url('media/SonicRunning.png');
-            background-size: cover;
-            background-color: none;
-            animation: SonicRun .25s steps(4) infinite;
-        }
-
-        #MoveMe2 {
-            width: 59px;
-            height: 62px;
-            position: relative;
-            background: url('media/Bowser.png');
-            background-size: cover;
-            background-color: none;
-            animation: Bowser 1s steps(4) infinite;
-        }
-
-        #MoveMe3 {
-            width: 114.8px;
-            height: 167px;
-            position: relative;
-            background: url('media/Etna.png');
-            background-size: cover;
-            background-color: none;
-            animation: Etna 1.5s steps(6) infinite;
-        }
-
-        #MoveMe4 {
-            width: 31px;
-            height: 33px;
-            position: relative;
-            background: url('media/knuckles2.png');
-            background-size: cover;
-            background-color: none;
-            animation: Knuckles 1.25s steps(9) infinite;
-        }
-    </style>
+</style>
 
 
 </head>
 
 <body>
-    <h1>Training Presentation:</h1>
-    <h1>Demonstrating CSS Animations </h1>
-    <h2>Examples of CSS animation:</h2>
-
-    <div class="column">
-        <div class="card">
-            <p>Etna Sprite Sheet</p>
-            <section><img src="media/Etna.png"></section>
+  <header>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScz_7Nj1lqURRLPU_Rb2U45-oSMwDJEzwSDgMr9z4aFxRRX6w/viewform">Link To Assessment</a>
+    <br>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScP_FGqCKLycZKQxQihsZSYN1-et7KrBotwQfXCZNhhFkj44w/viewform">Link To Evaluation</a>    
+  </header>
+   <h1>Training Presentation:</h1>
+   <h1>Demonstrating CSS Animations </h1>   
+   <h2>Examples of CSS animation:</h2> 
+  
+   <div class="column">
+    <div class="card">
+      <p>Etna Sprite Sheet</p>  
+      <section><img src="media/Etna.png"></section>
+      </div>
+      </div>
+  
+  
+  
+   <div class="row">
+     <div class="column">
+       <div class="card">  
+         <p>Sonic Sprite Sheet:</p>
+        <section><img src="media/Sonic.png"></section>
+       </div>
+       </div> 
+      
+       <div class="column">
+      <div class="card">  
+        <p>Bowser Sprite Sheet</p>
+        <section><img src="media/Bowser.png"></section>
         </div>
-    </div>
+        </div>  
+      
 
-
-
-    <div class="row">
         <div class="column">
-            <div class="card">
-                <p>Sonic Sprite Sheet:</p>
-                <section><img src="media/Sonic.png"></section>
+          <div class="card">
+            <p>Knuckles Sprite Sheet</p>  
+            <section><img src="media/knuckles2.png"></section>
             </div>
-        </div>
-
-        <div class="column">
-            <div class="card">
-                <p>Bowser Sprite Sheet</p>
-                <section><img src="media/Bowser.png"></section>
             </div>
-        </div>
-
-
-        <div class="column">
-            <div class="card">
-                <p>Knuckles Sprite Sheet</p>
-                <section><img src="media/knuckles2.png"></section>
-            </div>
-        </div>
-    </div>
-    <h2>Resulting Animations:</h2>
-    <section><p id="MoveMe1"><section><p id="MoveMe2"><section><p id="MoveMe3"><section><p id="MoveMe4"></p></section>
-
+      </div>          
+           <h2>Resulting Animations:</h2>
+           <section><p id="MoveMe1"><section><p id="MoveMe2"><section><p id="MoveMe3"><section><p id="MoveMe4"></p></section>
+        
 </body>
 </html>
