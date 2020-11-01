@@ -21,3 +21,5 @@ SonicRunning.png Height: 40px Width: 33px SheetWidth: 132px
 
 Knuckles2.png Height: 33px Width: 31 px SheetWidth: 279px
 
+Presentation:
+Contains the presentation overview as Powerpoint  
