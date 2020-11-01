@@ -2,7 +2,7 @@ ANIMATING SPRITES WITH CSS
 
 Demo:
 The demo will show you what the animations will look like.
-The demo includes 3 rendered animations continuously running.
+The demo includes 4 rendered animations continuously running.
 
 
 Starter:
@@ -18,4 +18,6 @@ Bowser.png Height: 62px Width: 159px SheetWidth: 236px
 Etna.png Height: 167px Width: 16.9 SheetWidth: 689px
 
 SonicRunning.png Height: 40px Width: 33px SheetWidth: 132px
+
+Knuckles2.png Height: 33px Width: 31 px SheetWidth: 279px
 
